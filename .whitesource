@@ -1,0 +1,6 @@
+{
+  "settingsInheritedFrom": "GarySegal-Mend-DemoCorp/whitesource-config@main",
+  "scanSettings": {
+    "configMode": "LOCAL"
+  }
+}
