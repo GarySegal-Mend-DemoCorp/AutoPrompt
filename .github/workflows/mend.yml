@@ -22,7 +22,7 @@ jobs:
         pip install virtualenv --user
         pip install -r requirements.txt
 
-    - name: Mend CLI Scan
+    - name: Mend CLI Scans
       env:
         MEND_EMAIL: ${{secrets.MEND_EMAIL}}
         MEND_USER_KEY: ${{secrets.MEND_USER_KEY}}
@@ -33,6 +33,7 @@ jobs:
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend scan
         mend dep -u -s "*//AI//AutoPrompt"
+        mend code -s "*//AI//AutoPrompt"
       continue-on-error: true
         
     - name: 'Upload .mend/logs folder'
