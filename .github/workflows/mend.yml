@@ -32,8 +32,8 @@ jobs:
         echo Downloading Mend CLI
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend scan
-        mend dep -u -s "*//AI//AutoPrompt"
         mend code -s "*//AI//AutoPrompt"
+        mend dep -u -s "*//AI//AutoPrompt"
       continue-on-error: true
         
     - name: 'Upload .mend/logs folder'
